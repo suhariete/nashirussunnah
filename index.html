@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masjid Al-Falah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Masjid Al-Falah</h1>
+        <p>“Bersama membangun ukhuwah dan ibadah”</p>
+    </header>
+
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#jadwal">Jadwal Sholat</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+    <section id="beranda">
+        <h2>Selamat Datang di Masjid Al-Falah</h2>
+        <p>Masjid Al-Falah adalah pusat kegiatan ibadah dan pembinaan umat di wilayah kami. Kami berkomitmen menjadi tempat yang nyaman, aman, dan penuh keberkahan bagi seluruh jamaah.</p>
+    </section>
+
+    <section id="jadwal">
+        <h2>Jadwal Sholat Hari Ini</h2>
+        <div id="jadwal-sholat">Memuat jadwal...</div>
+    </section>
+
+    <section id="agenda">
+        <h2>Agenda Kegiatan</h2>
+        <ul>
+            <li>Kajian Rutin – Setiap Jumat Ba’da Isya</li>
+            <li>Tahsin Qur’an – Setiap Sabtu Pagi</li>
+            <li>Kerja Bakti Masjid – Minggu Pertama setiap bulan</li>
+        </ul>
+    </section>
+
+    <section id="galeri">
+        <h2>Galeri Kegiatan</h2>
+        <div class="galeri-container">
+            <img src="img/masjid1.jpg" alt="Masjid">
+            <img src="img/kajian.jpg" alt="Kajian">
+            <img src="img/ramadhan.jpg" alt="Ramadhan">
+        </div>
+    </section>
+
+    <section id="kontak">
+        <h2>Kontak & Lokasi</h2>
+        <p>Alamat: Jl. Contoh No. 123, Kota Anda</p>
+        <p>Email: info@masjidalfalah.id</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="300" style="border:0;" allowfullscreen></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Masjid Al-Falah | Website ini gratis tanpa iklan</p>
+    </footer>
+
+    <script>
+        fetch("https://api.myquran.com/v1/sholat/jadwal/1301/2025/08/11")
+            .then(res => res.json())
+            .then(data => {
+                let j = data.data.jadwal;
+                document.getElementById("jadwal-sholat").innerHTML = `
+                    Subuh: ${j.subuh} | Dzuhur: ${j.dzuhur} | Ashar: ${j.ashar} | Maghrib: ${j.maghrib} | Isya: ${j.isya}
+                `;
+            })
+            .catch(err => {
+                document.getElementById("jadwal-sholat").innerHTML = "Gagal memuat jadwal.";
+            });
+    </script>
+</body>
+</html>
