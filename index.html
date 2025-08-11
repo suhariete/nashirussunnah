@@ -3,74 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masjid Al-Falah</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Masjid Nashirus Sunnah</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Masjid Al-Falah</h1>
-        <p>“Bersama membangun ukhuwah dan ibadah”</p>
+        <nav class="navbar">
+            <div class="logo">Masjid Nashirus Sunnah</div>
+            <ul class="nav-links">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#berita">Berita</a></li>
+                <li><a href="#program">Program</a></li>
+                <li><a href="#kegiatan">Kegiatan</a></li>
+                <li><a href="#laporan">Laporan Keuangan</a></li>
+                <li><a href="#donasi">Donasi</a></li>
+                <li><a href="#pengurus">Susunan Pengurus</a></li>
+                <li><a href="#sejarah">Sejarah</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#beranda">Beranda</a>
-        <a href="#jadwal">Jadwal Sholat</a>
-        <a href="#agenda">Agenda</a>
-        <a href="#galeri">Galeri</a>
-        <a href="#kontak">Kontak</a>
-    </nav>
-
-    <section id="beranda">
-        <h2>Selamat Datang di Masjid Al-Falah</h2>
-        <p>Masjid Al-Falah adalah pusat kegiatan ibadah dan pembinaan umat di wilayah kami. Kami berkomitmen menjadi tempat yang nyaman, aman, dan penuh keberkahan bagi seluruh jamaah.</p>
-    </section>
-
-    <section id="jadwal">
-        <h2>Jadwal Sholat Hari Ini</h2>
-        <div id="jadwal-sholat">Memuat jadwal...</div>
-    </section>
-
-    <section id="agenda">
-        <h2>Agenda Kegiatan</h2>
-        <ul>
-            <li>Kajian Rutin – Setiap Jumat Ba’da Isya</li>
-            <li>Tahsin Qur’an – Setiap Sabtu Pagi</li>
-            <li>Kerja Bakti Masjid – Minggu Pertama setiap bulan</li>
-        </ul>
-    </section>
-
-    <section id="galeri">
-        <h2>Galeri Kegiatan</h2>
-        <div class="galeri-container">
-            <img src="img/masjid1.jpg" alt="Masjid">
-            <img src="img/kajian.jpg" alt="Kajian">
-            <img src="img/ramadhan.jpg" alt="Ramadhan">
+    <section id="beranda" class="hero">
+        <div class="hero-text">
+            <h1>Selamat Datang di Masjid Nashirus Sunnah</h1>
+            <p>Pusat ibadah dan pembinaan umat, berlandaskan Al-Qur'an dan Sunnah.</p>
         </div>
     </section>
 
-    <section id="kontak">
+    <section id="jadwal" class="section">
+        <h2>Jadwal Sholat Hari Ini</h2>
+        <div id="jadwal-sholat" class="jadwal-box">Memuat...</div>
+    </section>
+
+    <section id="berita" class="section">
+        <h2>Berita Terbaru</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Pengumuman Kajian Akbar</h3>
+                <p>Kajian akbar bersama Ustadz XYZ pada 15 Agustus 2025 di halaman masjid.</p>
+            </div>
+            <div class="card">
+                <h3>Renovasi Tempat Wudhu</h3>
+                <p>Alhamdulillah renovasi telah selesai, siap digunakan jamaah.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="program" class="section">
+        <h2>Program Masjid</h2>
+        <div class="card-grid">
+            <div class="card"><h3>Tahfidz Qur'an</h3><p>Program rutin untuk anak-anak menghafal Al-Qur'an.</p></div>
+            <div class="card"><h3>Bakti Sosial</h3><p>Penyaluran bantuan kepada fakir miskin setiap bulan.</p></div>
+        </div>
+    </section>
+
+    <section id="kegiatan" class="section">
+        <h2>Kegiatan</h2>
+        <ul>
+            <li>Kajian Rutin - Jumat Ba’da Isya</li>
+            <li>Tahsin Qur’an - Sabtu Pagi</li>
+            <li>Kerja Bakti Masjid - Minggu Pertama setiap bulan</li>
+        </ul>
+    </section>
+
+    <section id="laporan" class="section">
+        <h2>Laporan Keuangan</h2>
+        <table>
+            <tr><th>Bulan</th><th>Pemasukan</th><th>Pengeluaran</th><th>Saldo</th></tr>
+            <tr><td>Juli 2025</td><td>Rp 10.000.000</td><td>Rp 7.500.000</td><td>Rp 2.500.000</td></tr>
+        </table>
+    </section>
+
+    <section id="donasi" class="section">
+        <h2>Donasi</h2>
+        <p>Salurkan donasi Anda melalui rekening:</p>
+        <p><b>Bank Syariah ABC</b> 1234-5678-9012</p>
+        <button onclick="salinRekening()">Salin No Rekening</button>
+        <p>Atau scan QRIS berikut:</p>
+        <img src="img/qris.png" alt="QRIS" style="max-width:200px;">
+    </section>
+
+    <section id="pengurus" class="section">
+        <h2>Susunan Pengurus</h2>
+        <ul>
+            <li>Ketua: Ahmad Fauzi</li>
+            <li>Wakil Ketua: Budi Santoso</li>
+            <li>Bendahara: Fatimah Zahra</li>
+        </ul>
+    </section>
+
+    <section id="sejarah" class="section">
+        <h2>Sejarah Masjid</h2>
+        <p>Masjid Nashirus Sunnah berdiri pada tahun 1995 sebagai pusat ibadah dan pembinaan umat di daerah ini...</p>
+    </section>
+
+    <section id="kontak" class="section">
         <h2>Kontak & Lokasi</h2>
         <p>Alamat: Jl. Contoh No. 123, Kota Anda</p>
-        <p>Email: info@masjidalfalah.id</p>
+        <p>Email: info@nashirussunnah.id</p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="300" style="border:0;" allowfullscreen></iframe>
     </section>
 
     <footer>
-        <p>&copy; 2025 Masjid Al-Falah | Website ini gratis tanpa iklan</p>
+        <p>&copy; 2025 Masjid Nashirus Sunnah | Website ini gratis tanpa iklan</p>
     </footer>
 
-    <script>
-        fetch("https://api.myquran.com/v1/sholat/jadwal/1301/2025/08/11")
-            .then(res => res.json())
-            .then(data => {
-                let j = data.data.jadwal;
-                document.getElementById("jadwal-sholat").innerHTML = `
-                    Subuh: ${j.subuh} | Dzuhur: ${j.dzuhur} | Ashar: ${j.ashar} | Maghrib: ${j.maghrib} | Isya: ${j.isya}
-                `;
-            })
-            .catch(err => {
-                document.getElementById("jadwal-sholat").innerHTML = "Gagal memuat jadwal.";
-            });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
